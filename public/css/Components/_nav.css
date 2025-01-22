@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+.nav_bar {
+    z-index: 3;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    width: 100%;
+    background: #F7F2FA;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    transition: all ease-in .5s;
+}
+
+.menu {
+    width: 50px;
+    cursor: pointer;
+}
+
+.left_part {
+    display: flex;
+    align-items: center;
+}
+
+.left_part label {
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 23px;
+    padding: 0px 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.right_part ul {
+    list-style-type: none;
+    display: flex;
+    transition: all ease-in 1s;
+}
+
+.right_part ul li {
+    margin: 0px 2px;
+    padding: 5px 10px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 2px;
+    transform: skew(-21deg);
+    background: rgb(218, 217, 217);
+}
+
+.right_part ul li:hover {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+    background: #6E00BE;
+}
+
+a , li{
+    color: #6E00BE;
+}
+
+.left_nav {
+    /* background-color: #dfc9ec; */
+    background-color: #F7F2FA;
+    width: 250px;
+    height: 50rem;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    left: -300px;
+    color: #6E00BE;
+    font-weight: bolder;
+    font-size: 20px;
+    z-index: 4;
+    transition: left ease 1s;
+}
+
+.activee {
+    left: 0px;
+}
+
+.left_nav ul {
+    list-style-type: none;
+}
+
+.left_nav ul li {
+    padding: 10px 0px;
+    text-decoration: none;
+}
+
+.left_nav ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.profile {
+    width: 35px;
+    border-radius: 20px;
+    padding: 5px;
+    outline: 2px solid purple;
+}
+
+.login {
+    display: flex;
+    width: 200px;
+    border: 2px solid purple;
+    padding: 5px;
+    border-radius: 10px;
+    justify-content: space-evenly;
+}
+
+.name button {
+    width: 100%;
+    color: #6E00BE;
+    font-weight: bold;
+}
+
+@media (max-width: 832px) {
+    .right_part ul {
+        display: none;
+    }
+
+    .nav_bar {
+        padding: 0px 30px;
+    }
+}

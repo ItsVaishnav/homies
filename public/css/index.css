@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Nav bar Styling */
+.anim{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.anim h1{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 40px;
+    -webkit-text-stroke: .1px #e3d0f0;
+    text-transform: uppercase;
+}
+
+@media (max-width : 568px){
+    .anim h1{
+        font-size: 6vw;
+    }
+        
+}
+
+.anim h1::before{
+    content:attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #6E00BE;
+    -webkit-text-stroke: .1px #6E00BE;
+    border-right: 1px solid #6E00BE;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0%,10% ,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+/* Nav Bar end */
+
+.main {
+    margin-top: 50px;
+}
+
+.search_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.slider_part {
+    width: 400px;
+}
+
+.main .search_section h1 {
+    font-family: 'Caveat', cursive;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 5vw;
+    text-align: center;
+}
+
+.main .search_section h1 label {
+    font-family: 'Dancing Script', cursive;
+}
+
+.search {
+    width: 50vw;
+    margin: 20px auto;
+    padding: 10px 0px 10px 10px;
+    color: #6E00BE;
+    border-radius: 50px;
+    font: 25px;
+    border: 1px solid purple;
+    text-align: center;
+    /* transition: all 1s ease; */
+}
+
+@media (max-width : 1138px){
+    .search {
+        width: 80vw;
+    }
+
+    #location {
+        width: 10vw;
+    }
+    
+    #budget {
+        width: 10vw;
+    }
+
+    .search button {
+        padding: 10px 5px;
+    }
+    
+}
+
+.search button {
+    padding: 10px 35px;
+    background-color: #6E00BE;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#location {
+    width: 20vw;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    border-right: 1px solid purple;
+}
+
+#budget {
+    width: 5vw;
+    padding: 5px;
+    border: none;
+    background: transparent;
+}
+
+option{
+    background: transparent;
+    cursor: pointer;
+}
+
+select {
+    padding: 5px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-right: 1px solid purple;
+}
+
+#budget:hover,
+select:hover,
+#location:hover {
+    outline: none;
+}
+
+
+/* Slider  */
+* {
+    box-sizing: border-box
+}
+
+.slid{
+    margin: 50px auto;
+    width: 300px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 1s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .2
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* Slider  */
+
+/* Cards */
+.cards{
+    padding: 20px;
+    text-decoration: none;
+}
+
+.card{
+    text-align: center;
+    width: 250px;
+    background-color: #a13dee;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
+    text-decoration: none;
+}
+.item{
+    width: 250px;
+    height: 160px;
+    overflow: hidden;
+    
+}
+.item img{
+    width: 250px;
+    overflow: hidden;
+    transition: all ease 1.5s;
+}
+.item img:hover{
+    transform: scale(1.4);
+}
+.info{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly ;
+    color: white;
+}
+
+.info h3{
+    padding: 5px 0px;
+}
+
+.info h4{
+    padding: 5px 0px;
+}
+
+.content{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap : wrap;
+}
+/* Cards */
+
